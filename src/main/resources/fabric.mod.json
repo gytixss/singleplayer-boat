@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "singleplayer-boat",
+	"version": "${version}",
+	"name": "Singleplayer Boat",
+	"description": "/boat or /b for singleplayer!!!",
+	"authors": [
+		"gytixss"
+	],
+	"contact": {
+		"sources": "https://github.com/gytixss/singleplayer-boat"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/singleplayer-boat/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gytixss.goat.SingleplayerBoat"
+		],
+		"client": [
+			"gytixss.goat.client.SingleplayerBoatClient"
+		]
+	},
+	"mixins": [
+		"singleplayer-boat.mixins.json",
+		{
+			"config": "singleplayer-boat.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
